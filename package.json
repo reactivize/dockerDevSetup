@@ -1,0 +1,31 @@
+{
+  "name": "node-in-docker-dev-env",
+  "version": "0.0.1",
+  "description": "set up a dev env for node in docker",
+  "main": "index.js",
+  "dependencies": {
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.9.2"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "startdebug": "node --debug=5858 index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "node",
+    "docker"
+  ],
+  "author": "reactivizer",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}
