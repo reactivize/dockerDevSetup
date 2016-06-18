@@ -11,10 +11,15 @@
 - Use the 'attach' config section
 - set the "address" key to your docker container ip address
 - set the "remoteRoot" to the value of APPROOT environment variable in the Dockerfile
-- notice the "port" value, '5858' is used in the 'docker run' command
+- notice the debugger's "port" value, '5858' is used in the 'docker run' command
+
+jsconfig.json
+- just an autocreated VSC config file
 
 Dockerfile
-- run this with the 'docker build' command
+- creates a base image
+- install into the base image all npm modules listed in the package.json
+- from this Dockerfile you create a docker image with the 'docker build' command
 - see below
 
 index.js

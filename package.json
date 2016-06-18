@@ -20,7 +20,9 @@
   },
   "keywords": [
     "node",
-    "docker"
+    "docker",
+    "docker volume",
+    "dev environment"
   ],
   "author": "reactivizer",
   "license": "MIT",
