@@ -11,7 +11,7 @@
 - Use the 'attach' config section
 - set the "address" key to your docker container ip address
 - set the "remoteRoot" to the value of APPROOT environment variable in the Dockerfile
-- notice the debugger's "port" value, '5858' is used in the 'docker run' command
+- notice the debugger's "port" value, '5858' must match the EXPOSE value in the Dockerfile
 
 jsconfig.json
 - just an autocreated VSC config file
@@ -24,6 +24,7 @@ Dockerfile
 
 index.js
 - your project's webserver entrypoint file
+- note that the port 3000 in this file must match the EXPOSE value in the Dockerfile
 
 
 ## Steps to get running
