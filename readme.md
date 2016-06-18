@@ -1,6 +1,27 @@
-vsc docker:
+# Docker Dev Environment Setup
+- Run your dev environment from a docker container
+- Your container points to your root project directory on your host machine, regardless of the OS
+- Browse your web app from the container's IP address
 
-steps...
+
+
+## Files
+.vscode/launch.json
+- the debugger config file
+- Use the 'attach' config section
+- set the "address" key to your docker container ip address
+- set the "remoteRoot" to the value of APPROOT environment variable in the Dockerfile
+- notice the "port" value, '5858' is used in the 'docker run' command
+
+Dockerfile
+- run this with the 'docker build' command
+- see below
+
+index.js
+- your project's webserver entrypoint file
+
+
+## steps to get running
 
 ### open docker cli
 
@@ -41,3 +62,7 @@ in vsc, hit F10 to move the debugger to the next line
 
 
 
+## Terms:
+
+VSC:
+Visual Studio Code
