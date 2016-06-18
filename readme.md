@@ -26,11 +26,11 @@ index.js
 - your project's webserver entrypoint file
 
 
-## steps to get running
+## Steps to get running
 
-### open the Docker Terminal 
+#### open the Docker Terminal 
 
-### cd into dev root folder
+#### cd into dev root folder
 ``` cd /c/_devapps/reactapps/vscode-debug-es6-node-docker-sample ```
 
 ``` ls ```
@@ -49,18 +49,20 @@ index.js
 ``` docker ps ```
 - should see the container in the list
 
-open ./index.js and set a breakpoint on the res.status line
+open ./index.js
+- then set a breakpoint on the res.status line
 
 start the Attach Debug configuration in VS Code
-vsc -> ctrl-shift-d -> select Attach from dropdown list -> click the green arrow (F5)
+- vsc -> ctrl-shift-d -> select Attach from dropdown list -> click the green arrow (F5)
 
 ``` docker-machine ip ```
-192.168.99.100
-- get this ip address of your docker vm
+- get the ip address of your docker vm
+- eg... 192.168.99.100
+
 
 open a browser to....
 192.168.99.100:3000
-- the page will spin because your breakpoint got hit
+- the page will stop and spin because your breakpoint got hit
 
 in vsc, hit F10 to move the debugger to the next line
 
