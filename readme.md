@@ -43,7 +43,7 @@ index.js
 - should see the hellovscode2 listed
 
 ``` docker run -d -v //c/Users/Public/mydocker/mydevproj:/app9 -p 3000:3000 -p 5858:5858 mydev ```
-2be51602c45cc23b580a36e2e5fd147488a7cdf30e94a1038e69eb060e430513
+- puts a snapshot of the docker image into memory as a docker container
 
 
 ``` docker ps ```
