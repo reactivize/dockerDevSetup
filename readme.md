@@ -23,7 +23,7 @@ index.js
 
 ## steps to get running
 
-### open docker cli
+### open the Docker Terminal 
 
 ### cd into dev root folder
 ``` cd /c/_devapps/reactapps/vscode-debug-es6-node-docker-sample ```
@@ -61,8 +61,18 @@ in vsc, hit F10 to move the debugger to the next line
 
 
 
+## Prereq:
+
+### on your host machine
+- install Docker Toolbox
+- install NodeJS
+
+
+
+
+
 
 ## Terms:
 
 VSC:
-Visual Studio Code
+- Visual Studio Code
