@@ -94,17 +94,23 @@ in vsc, hit F10 to move the debugger to the next line
 
 
 ## Troubleshoot
- docker ps
+ ```docker ps ```
  - to get your containerID
 
- docker rm -f 099
+ ``` docker rm -f 099 ```
  - stop container, by typing the first three characters of your containerID
- docker run -it -v //c/Users/Public/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash
-pwd
-ls -halt
-cat index.js
-npm run startdebug
 
+``` 
+docker run -it -v //c/Users/Public/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash
+
+pwd
+
+ls -halt
+
+cat index.js
+
+npm run startdebug
+```
 
 
 ## Terms:
