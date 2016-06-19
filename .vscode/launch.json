@@ -29,6 +29,6 @@
         "sourceMaps": false,
         "outDir": null,
         "localRoot": "${workspaceRoot}/",
-        "remoteRoot": "/app9/"
+        "remoteRoot": "/devsrc/"
     }]
 }

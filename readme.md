@@ -45,29 +45,41 @@ eg path...
 - wait a couple minutes
 
 ``` docker images ```
-- should see the hellovscode2 listed
+- should see the mydev listed under the 'REPOSITORY' column
 
-``` docker run -d -v //c/Users/Public/mydocker/mydevproj:/app9 -p 3000:3000 -p 5858:5858 mydev ```
+``` docker run -d -v //c/Users/Public/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev ```
 - puts a snapshot of the docker image into memory as a docker container
 
 
 ``` docker ps ```
 - should see the container in the list
+- ie... the 'IMAGE' column should say mydev
 
-open ./index.js
-- then set a breakpoint on the res.status line
-
-start the Attach Debug configuration in VS Code
-- vsc -> ctrl-shift-d -> select Attach from dropdown list -> click the green arrow (F5)
+in the VSC IDE, open ./index.js
+- then set a breakpoint on the res.status line (line number 5)
 
 ``` docker-machine ip ```
 - get the ip address of your docker vm
 - eg... 192.168.99.100
 
+in the debug config file called, 'launch.json', confirm these settings are correct...
+```
+"port": 5858,
+"address": "192.168.99.100",
+"remoteRoot": "/devsrc/"
+``` 
+
+
+start the Attach Debug configuration in VS Code
+- vsc -> ctrl-shift-d -> select Attach from dropdown list -> click the green arrow (F5)
+
+
+
 
 open a browser to....
 192.168.99.100:3000
 - the page will stop and spin because your breakpoint got hit
+- note: do not browse to localhost; rather, use the container's IP address
 
 in vsc, hit F10 to move the debugger to the next line
 
@@ -81,6 +93,17 @@ in vsc, hit F10 to move the debugger to the next line
 
 
 
+## Troubleshoot
+ docker ps
+ - to get your containerID
+
+ docker rm -f 099
+ - stop container, by typing the first three characters of your containerID
+ docker run -it -v //c/Users/Public/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash
+pwd
+ls -halt
+cat index.js
+npm run startdebug
 
 
 
