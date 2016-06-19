@@ -100,20 +100,35 @@ in vsc, hit F10 to move the debugger to the next line
  ``` docker rm -f 099 ```
  - stop container, by typing the first three characters of your containerID
 
-``` 
-docker run -it -v //c/Users/Public/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash
+``` docker run -it -v //c/Users/Public/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash ```
+- run the container and log into it's terminal
 
-pwd
+``` pwd ```
+- verify you're in your container's working directory
+- which is mounted to the project's root folder
 
-ls -halt
+``` ls -halt ```
+- list your project's files in the project root directory
 
-cat index.js
+``` cat index.js ```
+- if you change the contents of the index.js file in your IDE, 
+- you should see the changes reflected from your container 
 
-npm run startdebug
-```
+``` npm run startdebug ``` 
+- run the server from the container
+- the browse to the url (see details above)
 
 
 ## Terms:
 
 VSC:
-- Visual Studio Code
+- Visual Studio Code IDE
+-- though any IDE can be set up to debug your app in a docker container
+
+
+## Constraints
+For a Win10 host OS, 
+- either place your dev project under //c/Users/Public/
+- or set read permissions to your project root folder
+- so the docker container has permission to read the volume mount on the host OS
+
