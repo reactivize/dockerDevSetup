@@ -1,8 +1,13 @@
-FROM node:latest
+#
+#
+FROM node:6.2.1
 
 EXPOSE 3000
 EXPOSE 5858
-WORKDIR /app9
 
-RUN cd /app9; npm install
+ENV APPROOT="/devsrc"
+
+WORKDIR $APPROOT
+
+RUN cd $APPROOT; npm install
 CMD npm start

@@ -29,10 +29,14 @@ index.js
 
 ## Steps to get running
 
-#### open the Docker Terminal 
+open the Docker Terminal
 
-#### cd into dev root folder
-``` cd /c/_devapps/reactapps/vscode-debug-es6-node-docker-sample ```
+cd into dev root folder
+
+do a git clone of this repo
+
+eg path...
+``` cd /c/Users/Public/mydocker/mydevproj ```
 
 ``` ls ```
 - should see a Dockerfile
