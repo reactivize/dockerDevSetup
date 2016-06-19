@@ -123,7 +123,7 @@ in vsc, hit F10 to move the debugger to the next line
 
 VSC:
 - Visual Studio Code IDE
--- though any IDE can be set up to debug your app in a docker container
+- though any IDE can be set up to debug your app in a docker container
 
 
 ## Constraints

@@ -1,0 +1,4 @@
+.dockerignore
+__notInGit
+.vscode
+
