@@ -132,3 +132,6 @@ For a Win10 host OS,
 - or set read permissions to your project root folder
 - so the docker container has permission to read the volume mount on the host OS
 
+
+## Docker Compose
+coming soon!
