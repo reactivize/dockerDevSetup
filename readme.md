@@ -36,7 +36,7 @@ cd into dev root folder
 do a git clone of this repo
 
 eg path...
-``` cd /c/Users/Public/mydocker/mydevproj ```
+``` cd /c/Users/mydocker/mydevproj ```
 
 ``` ls ```
 - should see a Dockerfile
@@ -47,7 +47,7 @@ eg path...
 ``` docker images ```
 - should see the mydev listed under the 'REPOSITORY' column
 
-``` docker run -d -v //c/Users/Public/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev ```
+``` docker run -d -v //c/Users/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev ```
 - puts a snapshot of the docker image into memory as a docker container
 
 
@@ -100,7 +100,7 @@ in vsc, hit F10 to move the debugger to the next line
  ``` docker rm -f 099 ```
  - stop container, by typing the first three characters of your containerID
 
-``` docker run -it -v //c/Users/Public/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash ```
+``` docker run -it -v //c/Users/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash ```
 - run the container and log into it's terminal
 
 ``` pwd ```
@@ -128,9 +128,21 @@ VSC:
 
 ## Constraints
 For a Win10 host OS, 
-- either place your dev project under //c/Users/Public/
+- either place your dev project under //c/Users/
 - or set read permissions to your project root folder
 - so the docker container has permission to read the volume mount on the host OS
+
+
+
+
+## Extra
+To map a shared folder from your Host OS to VirtualBox
+- from the terminal
+
+``` VBoxManage sharedfolder add "default" --name "mydevproj" --hostpath "C:\devApps\mydevproj" ```
+
+- This will put an entry in VirtualBox -> default -> settings -> Shared Folders
+
 
 
 ## Docker Compose
