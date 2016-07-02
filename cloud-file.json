@@ -1,0 +1,27 @@
+{
+  "services": [
+    {
+      "name": "app",
+      "image": "",
+      "target_num_containers": 1,
+      "sequential_deployment": true,
+      "autorestart": "ALWAYS",
+      "autoredeploy": true,
+      "container_ports": [
+        {
+          "protocol": "tcp",
+          "inner_port": 3000,
+          "published": true,
+          "outer_port": 5947
+        }
+      ],
+      "container_envvars": [
+        {
+          "key": "NODE_ENV",
+          "value": "production"
+        }
+      ]
+    }
+  ],
+  "name": "reactivizedockerDevSetup"
+}
