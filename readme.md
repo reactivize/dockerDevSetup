@@ -42,6 +42,7 @@ eg path...
 - should see a Dockerfile
 
 ``` docker build -t mydev . ```
+- the -t switch tags the image with a tagname
 - wait a couple minutes
 
 ``` docker images ```
