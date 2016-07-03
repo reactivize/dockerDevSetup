@@ -4,7 +4,8 @@
   "description": "set up a dev env for node in docker",
   "main": "index.js",
   "dependencies": {
-    "express": "4.14.0"
+    "express": "4.14.0",
+    "restify": "4.1.1"
   },
   "devDependencies": {
     "nodemon": "1.9.2",
