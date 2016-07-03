@@ -22,7 +22,7 @@ Dockerfile
 - from this Dockerfile you create a docker image with the 'docker build' command
 - see below
 
-index.js
+server.js
 - your project's webserver entrypoint file
 - note that the port 3000 in this file must match the EXPOSE value in the Dockerfile
 
@@ -56,7 +56,7 @@ eg path...
 - should see the container in the list
 - ie... the 'IMAGE' column should say mydev
 
-in the VSC IDE, open ./index.js
+in the VSC IDE, open ./server.js
 - then set a breakpoint on the res.status line (line number 5)
 
 ``` docker-machine ip ```
@@ -111,8 +111,8 @@ in vsc, hit F10 to move the debugger to the next line
 ``` ls -halt ```
 - list your project's files in the project root directory
 
-``` cat index.js ```
-- if you change the contents of the index.js file in your IDE, 
+``` cat server.js ```
+- if you change the contents of the server.js file in your IDE, 
 - you should see the changes reflected from your container 
 
 ``` npm run startdebug ``` 
