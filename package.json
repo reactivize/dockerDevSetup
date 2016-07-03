@@ -2,7 +2,7 @@
   "name": "node-in-docker-dev-env",
   "version": "0.0.1",
   "description": "set up a dev env for node in docker",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "express": "4.14.0",
     "restify": "4.1.1"
@@ -12,8 +12,9 @@
     "ava": "0.15.2"
   },
   "scripts": {
-    "start": "nodemon index.js",
-    "startdebug": "node --debug=5858 index.js",
+    "start": "nodemon server.js",
+    "startdebug": "node --debug=5858 server.js",
+    "start:restify": "node --debug=5858 server_restify.js",
     "test": "ava \"**/*.test.js\" --verbose"
   },
   "repository": {

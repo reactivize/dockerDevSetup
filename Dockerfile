@@ -1,6 +1,6 @@
 #
 #
-FROM node:6.2.2
+FROM node:6.2.1
 
 EXPOSE 3000
 EXPOSE 5858

@@ -46,7 +46,7 @@ eg path...
 - wait a couple minutes
 
 ``` docker images ```
-- should see the mydev listed under the 'REPOSITORY' column
+- should see the mydev image listed under the 'REPOSITORY' column
 
 ``` docker run -d -v //c/Users/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev ```
 - puts a snapshot of the docker image into memory as a docker container
@@ -117,7 +117,7 @@ in vsc, hit F10 to move the debugger to the next line
 
 ``` npm run startdebug ``` 
 - run the server from the container
-- the browse to the url (see details above)
+- then browse to the url (see details above)
 
 
 ## Terms:
