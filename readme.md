@@ -148,3 +148,8 @@ To map a shared folder from your Host OS to VirtualBox
 
 ## Docker Compose
 coming soon!
+
+
+## TASK:
+add babel so we can write node in es6
+
