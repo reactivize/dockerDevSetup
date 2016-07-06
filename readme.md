@@ -152,4 +152,4 @@ coming soon!
 
 ## TASK:
 add babel so we can write node in es6
-
+- added
