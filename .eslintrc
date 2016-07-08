@@ -45,7 +45,7 @@
   },
   /*
   list of rules
-  http://eslint.org/docs/rules/
+  http://eslint.org/docs/rules
 
   http://eslint.org/docs/user-guide/configuring#configuring-rules
 0 - turn the rule off
