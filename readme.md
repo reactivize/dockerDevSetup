@@ -147,7 +147,7 @@ To map a shared folder from your Host OS to VirtualBox
 
 
 ## Docker Compose
-coming soon!
+coming soon
 
 
 ## TASK:
