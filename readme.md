@@ -79,10 +79,15 @@ docker ps
 in the VSC IDE, open ./server.js
 - then set a breakpoint on the res.status line (line number 5)
 
-` docker-machine ip `
-- get the ip address of your docker vm
-- eg... 192.168.99.100
 
+
+```bash
+
+docker-machine ip
+# get the ip address of your docker vm
+# eg... 192.168.99.100
+
+```
 
 
 in the debug config file called, 'launch.json', confirm these settings are correct...
@@ -118,30 +123,33 @@ in vsc, hit F10 to move the debugger to the next line
 
 
 ## Troubleshoot
- `docker ps `
- - to get your containerID
 
- ` docker rm -f 099 `
- - stop container, by typing the first three characters of your containerID
+```bash
+docker ps
+ # to get your containerID
 
-` docker run -it -v "$PWD":/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash `
-- run the container and log into it's terminal
+docker rm -f 099
+ # stop container, by typing the first three characters of your containerID
 
-` pwd `
-- verify you're in your container's working directory
-- which is mounted to the project's root folder
+docker run -it -v "$PWD":/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash
+# run the container and log into it's terminal
 
-` ls -halt `
-- list your project's files in the project root directory
+pwd
+# verify you're in your container's working directory
+# which is mounted to the project's root folder
 
-` cat server.js `
-- if you change the contents of the server.js file in your IDE, 
-- you should see the changes reflected from your container 
+ls -halt
+# list your project's files in the project root directory
 
-` npm run startdebug ` 
-- run the server from the container
-- then browse to the url (see details above)
+cat server.js
+# if you change the contents of the server.js file in your IDE, 
+# you should see the changes reflected from your container 
 
+npm run startdebug 
+# run the server from the container
+# then browse to the url (see details above)
+
+```
 
 ## Terms:
 
@@ -163,10 +171,10 @@ For a Win10 host OS,
 To map a shared folder from your Host OS to VirtualBox
 - from the terminal
 
-` VBoxManage sharedfolder add "default" --name "mydevproj" --hostpath "C:\devApps\mydevproj" `
-
-- This will put an entry in VirtualBox -> default -> settings -> Shared Folders
-
+```bash
+VBoxManage sharedfolder add "default" --name "mydevproj" --hostpath "C:\devApps\mydevproj"
+# This will put an entry in VirtualBox -> default -> settings -> Shared Folders
+```
 
 
 ## Docker Compose
