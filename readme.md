@@ -36,7 +36,7 @@ cd into dev root folder
 do a git clone of this repo
 
 eg path...
-``` cd /c/Users/mydocker/mydevproj ```
+` cd /c/Users/mydocker/mydevproj `
 
 ` ls `
 - should see a Dockerfile
@@ -48,7 +48,7 @@ eg path...
 ` docker images `
 - should see the mydev image listed under the 'REPOSITORY' column
 
-` docker run -d -v //c/Users/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev `
+` docker run -d -v "$PWD":/devsrc -p 3000:3000 -p 5858:5858 mydev `
 - puts a snapshot of the docker image into memory as a docker container
 
 
@@ -63,7 +63,10 @@ in the VSC IDE, open ./server.js
 - get the ip address of your docker vm
 - eg... 192.168.99.100
 
+
+
 in the debug config file called, 'launch.json', confirm these settings are correct...
+
 `
 "port": 5858,
 "address": "192.168.99.100",
@@ -101,7 +104,7 @@ in vsc, hit F10 to move the debugger to the next line
  ` docker rm -f 099 `
  - stop container, by typing the first three characters of your containerID
 
-` docker run -it -v //c/Users/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash `
+` docker run -it -v "$PWD":/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash `
 - run the container and log into it's terminal
 
 ` pwd `
