@@ -6,23 +6,23 @@
 
 
 ## Files
-.vscode/launch.json
+> .vscode/launch.json
 - the debugger config file
 - Use the 'attach' config section
 - set the "address" key to your docker container ip address
 - set the "remoteRoot" to the value of APPROOT environment variable in the Dockerfile
 - notice the debugger's "port" value, '5858' must match the EXPOSE value in the Dockerfile
 
-jsconfig.json
+> jsconfig.json
 - just an autocreated VSC config file
 
-Dockerfile
+> Dockerfile
 - creates a base image
 - install into the base image all npm modules listed in the package.json
 - from this Dockerfile you create a docker image with the 'docker build' command
 - see below
 
-server.js
+> server.js
 - your project's webserver entrypoint file
 - note that the port 3000 in this file must match the EXPOSE value in the Dockerfile
 
