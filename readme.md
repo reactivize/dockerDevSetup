@@ -38,37 +38,37 @@ do a git clone of this repo
 eg path...
 ``` cd /c/Users/mydocker/mydevproj ```
 
-``` ls ```
+` ls `
 - should see a Dockerfile
 
-``` docker build -t mydev . ```
+` docker build -t mydev . `
 - the -t switch tags the image with a tagname
 - wait a couple minutes
 
-``` docker images ```
+` docker images `
 - should see the mydev image listed under the 'REPOSITORY' column
 
-``` docker run -d -v //c/Users/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev ```
+` docker run -d -v //c/Users/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev `
 - puts a snapshot of the docker image into memory as a docker container
 
 
-``` docker ps ```
+` docker ps `
 - should see the container in the list
 - ie... the 'IMAGE' column should say mydev
 
 in the VSC IDE, open ./server.js
 - then set a breakpoint on the res.status line (line number 5)
 
-``` docker-machine ip ```
+` docker-machine ip `
 - get the ip address of your docker vm
 - eg... 192.168.99.100
 
 in the debug config file called, 'launch.json', confirm these settings are correct...
-```
+`
 "port": 5858,
 "address": "192.168.99.100",
 "remoteRoot": "/devsrc/"
-``` 
+`
 
 
 start the Attach Debug configuration in VS Code
@@ -95,27 +95,27 @@ in vsc, hit F10 to move the debugger to the next line
 
 
 ## Troubleshoot
- ```docker ps ```
+ `docker ps `
  - to get your containerID
 
- ``` docker rm -f 099 ```
+ ` docker rm -f 099 `
  - stop container, by typing the first three characters of your containerID
 
-``` docker run -it -v //c/Users/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash ```
+` docker run -it -v //c/Users/mydocker/mydevproj:/devsrc -p 3000:3000 -p 5858:5858 mydev /bin/bash `
 - run the container and log into it's terminal
 
-``` pwd ```
+` pwd `
 - verify you're in your container's working directory
 - which is mounted to the project's root folder
 
-``` ls -halt ```
+` ls -halt `
 - list your project's files in the project root directory
 
-``` cat server.js ```
+` cat server.js `
 - if you change the contents of the server.js file in your IDE, 
 - you should see the changes reflected from your container 
 
-``` npm run startdebug ``` 
+` npm run startdebug ` 
 - run the server from the container
 - then browse to the url (see details above)
 
@@ -140,7 +140,7 @@ For a Win10 host OS,
 To map a shared folder from your Host OS to VirtualBox
 - from the terminal
 
-``` VBoxManage sharedfolder add "default" --name "mydevproj" --hostpath "C:\devApps\mydevproj" ```
+` VBoxManage sharedfolder add "default" --name "mydevproj" --hostpath "C:\devApps\mydevproj" `
 
 - This will put an entry in VirtualBox -> default -> settings -> Shared Folders
 
