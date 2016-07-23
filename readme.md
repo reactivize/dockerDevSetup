@@ -29,32 +29,48 @@ server.js
 
 ## Steps to get running
 
-open the Docker Terminal
+```bash
+# open the Docker Terminal
 
-cd into dev root folder
+# cd into dev root folder
 
-do a git clone of this repo
+# do a git clone of this repo
 
-eg path...
-` cd /c/Users/mydocker/mydevproj `
-
-` ls `
-- should see a Dockerfile
-
-` docker build -t mydev . `
-- the -t switch tags the image with a tagname
-- wait a couple minutes
-
-` docker images `
-- should see the mydev image listed under the 'REPOSITORY' column
-
-` docker run -d -v "$PWD":/devsrc -p 3000:3000 -p 5858:5858 mydev `
-- puts a snapshot of the docker image into memory as a docker container
+# eg path...
+# cd /c/Users/mydocker/mydevproj
 
 
-` docker ps `
-- should see the container in the list
-- ie... the 'IMAGE' column should say mydev
+
+
+ls
+# should see a Dockerfile
+
+
+
+docker build -t mydev .
+# the -t switch tags the image with a tagname
+# wait a couple minutes
+
+
+
+docker images
+# should see the mydev image listed under the 'REPOSITORY' column
+
+
+
+docker run -d -v "$PWD":/devsrc -p 3000:3000 -p 5858:5858 mydev
+# puts a snapshot of the docker image into memory as a docker container
+
+
+
+docker ps
+# should see the container in the list
+# ie... the 'IMAGE' column should say mydev
+
+```
+
+
+
 
 in the VSC IDE, open ./server.js
 - then set a breakpoint on the res.status line (line number 5)
